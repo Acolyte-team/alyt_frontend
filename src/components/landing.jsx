@@ -4,7 +4,9 @@ import React from 'react'
 import { useState } from 'react';
 // import { ethers } from 'ethers';
 import Web3 from 'web3';
+import Image from 'next/image'
 import { useRouter } from "next/navigation";
+
 
 
 
@@ -51,17 +53,53 @@ const Landing = () => {
   }
 
   return (
-      <div className='container'>
-        <h1>Alyte App</h1>
-       
-        <div id="connectMessage">Please connect your Wallet</div>
-        <h3>Wallet Address: {walletAddress}</h3>
-        <div id='connectWalletBtn'>
-          <button onClick={requestAccount}>Connect Wallet</button>
+      <div
+        className='h-screen w-6/12 p-6 border-2 rounded-xl flex justify-center items-center'
+    >
+        <div
+            className='flex flex-col items-center'
+        >
+            <p
+                className='font-bold text-6xl text-white mb-4 text-center'
+            >
+                Social Interaction Made Fun
+            </p>
 
+            <div
+                className='w-8/12 border-2 rounded-xl p-2 flex flex-row justify-between items-center'
+            >
+                <Image 
+                    src='/assets/qr-'
+                    className='h-[96px] w-[96px]'
+                    width={100}
+                    height={100}
+                    alt=''
+                />
+
+                <div>
+                    <p
+                        className='font-semibold text-sm text-white w-10/12 mb-2'
+                    >
+                    Scan QR code and Login to Acolyte or...
+                    Login to Votechat
+                    </p>
+
+                    <button onClick={requestAccount}
+                        className='flex flex-row justify-between items-center h-[30px] bg-slate-500/50 py-2 px-2 rounded-xl text-white font-bold text-base'
+                    >
+                        <Image
+                            src="/assets/wallets.png" 
+                            className="mr-2"
+                            width={100}
+                            height={100}
+                            alt=''
+                        /> 
+                        Connect Metamask
+                    </button>
+                </div>
+            </div>
         </div>
-        <div id='tweetsContainer'></div>
-     </div>
+    </div>
   )
 }
 
