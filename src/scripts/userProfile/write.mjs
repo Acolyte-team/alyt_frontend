@@ -9,7 +9,7 @@ const web3 = new Web3("https://json-rpc.testnet.swisstronik.com/"); // Any RPC n
 web3.registerPlugin(new SwisstronikPlugin());
 
 async function main() {
-  const ERC20_CONTRACT_ADDRESS = "0x2e79CC77048e48C85ccc14959A8b6963ADcF5376";
+ 
   const wallet = web3.eth.wallet.add("0x45a71309065d92d987010d97253ab26b0406f338b8de46a9c4f267d305c5d1fa");
 // request accounts
 //const accounts = await web3.eth.requestAccounts()

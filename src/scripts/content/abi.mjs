@@ -3,11 +3,6 @@ const ABI = [
 		"inputs": [
 			{
 				"internalType": "address",
-				"name": "_tokenAddress",
-				"type": "address"
-			},
-			{
-				"internalType": "address",
 				"name": "userProfileAddress",
 				"type": "address"
 			}
@@ -64,37 +59,6 @@ const ABI = [
 		],
 		"name": "ContentInteraction",
 		"type": "event"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "string",
-				"name": "_contentType",
-				"type": "string"
-			}
-		],
-		"name": "createContent",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_contentId",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "_interactionType",
-				"type": "string"
-			}
-		],
-		"name": "interactWithContent",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
 	},
 	{
 		"inputs": [],
@@ -156,6 +120,19 @@ const ABI = [
 	{
 		"inputs": [
 			{
+				"internalType": "string",
+				"name": "_contentType",
+				"type": "string"
+			}
+		],
+		"name": "createContent",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
 				"internalType": "uint256",
 				"name": "_contentId",
 				"type": "uint256"
@@ -205,29 +182,21 @@ const ABI = [
 		"type": "function"
 	},
 	{
-		"inputs": [],
-		"name": "getContractBalance",
-		"outputs": [
+		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "",
+				"name": "_contentId",
 				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "tokenAddress",
-		"outputs": [
+			},
 			{
-				"internalType": "contract IERC20",
-				"name": "",
-				"type": "address"
+				"internalType": "string",
+				"name": "_interactionType",
+				"type": "string"
 			}
 		],
-		"stateMutability": "view",
+		"name": "interactWithContent",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	},
 	{

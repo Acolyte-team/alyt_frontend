@@ -25,7 +25,15 @@ const Landing = () => {
         // console.log("metamsk accounts",accounts);
          setWalletAddress(accounts[0]);
 
+        // Save the wallet address in local storage
+        localStorage.setItem('walletAddress', accounts[0]);
+
+        // Redirect to profile page if wallet is connected
+        if (accounts.length > 0) {
           router.push("/profile");
+        } else {
+          console.log("No accounts found.");
+        }
 
       }catch(err){
          if (err.code === 4001) {
