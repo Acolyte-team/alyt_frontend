@@ -62,38 +62,7 @@ const Landing = () => {
                 Social Interaction Made Fun
             </p>
 
-            <div
-                className='w-8/12 border-2 rounded-xl p-2 flex flex-row justify-between items-center'
-            >
-                <Image 
-                    src='/assets/Images/qr-code.png'
-                    className='h-[96px] w-[96px]'
-                    width={100}
-                    height={100}
-                    alt=''
-                />
-
-                <div>
-                    <p
-                        className='font-semibold text-sm text-white w-10/12 mb-2'
-                    >
-                    Scan QR code and Login to Acolyte
-                    </p>
-
-                    {/* <button onClick={requestAccount}
-                        className='flex flex-row justify-between items-center h-[30px] bg-slate-500/50 py-2 px-2 rounded-xl text-white font-bold text-base'
-                    >
-                        <Image
-                            src="/assets/Images/wallets.png" 
-                            className="mr-2"
-                            width={100}
-                            height={100}
-                            alt=''
-                        /> 
-                        Connect Metamask
-                    </button> */}
-                </div>
-            </div>
+          
         </div>
     </div>
   )

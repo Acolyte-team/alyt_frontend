@@ -97,7 +97,7 @@ export default function CreateProfile() {
       <div className="w-full h-screen fixed bg-black/50 flex justify-center items-center">
       <div className="bg-[#101828] w-4/12 rounded-xl p-4">
        <div className="border-b border-[#344054] flex flex-row justify-center items-center h-[80px] mb-4">
-        <p>Account: {walletAddress}</p>
+        {/* <p>Account: {walletAddress}</p> */}
         <p className="text-2xl font-bold text-white"> Create your profile</p>
         <Link href={"/"}><IoClose className="text-white font-medium ml-8 text-xl" /></Link>  
       </div>
