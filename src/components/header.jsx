@@ -11,19 +11,19 @@ const Header = () => {
         >
             Acolyte
         </p>
-{/* 
+
         <button
             className='flex flex-row justify-between items-center h-[52px] bg-slate-500/50 py-2 px-4 rounded-xl text-white font-medium text-lg'
         >
            <Image 
-            src="/assets/metamask.png" 
+            src="/assets/Images/metamask.png" 
             className="mr-2"
             width="24" 
             height="24"
             alt=''
            /> 
            Connect Metamask
-        </button> */}
+        </button> 
     </div>
   )
 }

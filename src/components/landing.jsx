@@ -7,9 +7,6 @@ import Web3 from 'web3';
 import Image from 'next/image'
 import { useRouter } from "next/navigation";
 
-
-
-
 const Landing = () => {
   const [walletAddress, setWalletAddress] = useState("");
   const router = useRouter();
@@ -69,7 +66,7 @@ const Landing = () => {
                 className='w-8/12 border-2 rounded-xl p-2 flex flex-row justify-between items-center'
             >
                 <Image 
-                    src='/assets/qr-'
+                    src='/assets/Images/qr-code.png'
                     className='h-[96px] w-[96px]'
                     width={100}
                     height={100}
@@ -88,7 +85,7 @@ const Landing = () => {
                         className='flex flex-row justify-between items-center h-[30px] bg-slate-500/50 py-2 px-2 rounded-xl text-white font-bold text-base'
                     >
                         <Image
-                            src="/assets/wallets.png" 
+                            src="/assets/Images/wallets.png" 
                             className="mr-2"
                             width={100}
                             height={100}
