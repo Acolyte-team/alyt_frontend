@@ -1,6 +1,15 @@
-import Landing from "@/components/landing";
+// import Landing from "@/components/landing";
 import Image from "next/image";
-import Header from "@/components/header";
+// import Header from "@/components/header";
+import dynamic from "next/dynamic";
+
+const Landing = dynamic(() => import ("../components/landing"), {
+  ssr: false,
+})
+
+const Header = dynamic(() => import("../components/header"),  {
+  ssr: false
+})
 
 export default function Home() {
   return (

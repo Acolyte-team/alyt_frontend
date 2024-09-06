@@ -60,24 +60,16 @@ export default function CreateProfile() {
 
   useEffect(() => {
     const loadBlockchainData = async () => {
-      if (window.ethereum) {
+      if (typeof window !== 'undefined' && window.ethereum) {
         try {
-          // Request account access if needed
           await window.ethereum.request({ method: "eth_requestAccounts" });
-
-          // Connect to Web3 with the Swisstronik plugin
           const web3 = new Web3("https://json-rpc.testnet.swisstronik.com/");
           web3.registerPlugin(new SwisstronikPlugin());
-
-          // Get the user's account
+          
           const accounts = await web3.eth.getAccounts();
-
           setAccount(accounts[0]);
-
-          // Create a contract instance
+          
           const contract = new web3.eth.Contract(ABI, USERPROFILE_CONTRACT_ADDRESS);
-
-          // Fetch the user profile
           const profile = await contract.methods.getUser().call();
           setUserProfile(profile);
           console.log("User Profile: ", profile);
